@@ -30,4 +30,4 @@ jobs:
         run: docker login ghcr.io -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}
 
       - name: Push Docker image to GitHub Container Registry
-        run: docker push ${{ env.REGISTRY }}/nginx-distroless-base:latest
+        run: docker push ${{ env.REGISTRY }}/subzone/nginx-distroless-base:latest
