@@ -56,16 +56,6 @@ jobs:
           # Acceptable value is one of (error|warning|info|style|ignore|none)
           hadolint-severity: info
 
-          # # Enable scanning image by dockle (default "true")
-          # dockle-enable: "true"
-
-          # # Dockle version.
-          # dockle-version: "0.4.3"
-
-          # # Fail step if checkpoints with a severity above this level are violated (default "WARN")
-          # # Acceptable value is one of (INFO|WARN|FATAL)
-          # dockle-severity: WARN
-
           # Enable scanning image by trivy (default "true")
           trivy-enable: "true"
 
@@ -84,23 +74,7 @@ jobs:
           # Ignore unfixed vulnerabilities (default "false")
           trivy-ignore-unfixed: "false"
 
-          # Enable scanning image by snyk (default "false")
-          # If enabled, "snyk-token" must be also set.
-          snyk-enable: "false"
-
-          # Snyk CLI version.
-          snyk-version: "1.848.0"
-
-          # Snyk API Token (default "")
-          # This is necessary if "snyk-enable" is "true".
-          snyk-token: ""
-
-          # Fail step if image has vulnerabilities with a severity above this level (default "low")
-          # Acceptable value is one of (low|medium|high|critical)
-          snyk-severity: low
-
-          # Exclude base image vulnerabilities (default "false")
-          snyk-exclude-base-image-vulns: "false"
+          
       - name: Log in to GitHub Container Registry
         run: docker login ghcr.io -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}
 
