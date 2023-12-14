@@ -26,6 +26,13 @@ jobs:
       - name: Build the Docker image
         run: docker build -t ${{ env.REGISTRY }}/subzone/nginx-distroless-base:latest ${{ github.workspace }}/nginx-base
 
+      - name: ☢ Scan Images
+        uses: spicyparrot/scan-images@trunk
+        id: nginx
+        with:
+          image_grep: "nginx"
+          severities: "CRITICAL,HIGH"   
+
       - name: Log in to GitHub Container Registry
         run: docker login ghcr.io -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}
 
