@@ -38,10 +38,10 @@ jobs:
         uses: ISID/build-and-scan-image@main
         with:
           # Image name and optionally tag in "name:tag" format
-          tag: "YOUR_IMAGE_NAME:TAG"
+          tag: ${{ env.REGISTRY }}/subzone/nginx-distroless-base:latest
 
           # Path to base directory to run `docker build` command (default ".")
-          path: "."
+          path: ${{ github.workspace }}/nginx-base
 
           # Path to Dockerfile, which is relative path from "path" parameter (default "Dockerfile")
           dockerfile: Dockerfile
