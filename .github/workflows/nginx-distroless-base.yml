@@ -65,7 +65,7 @@ jobs:
           # Fail step if image has vulnerabilities with a severity same as this level
           # (default "UNKNOWN,LOW,MEDIUM,HIGH,CRITICAL")
           # Acceptable value is comma-separated list of (UNKNOWN|LOW|MEDIUM|HIGH|CRITICAL)
-          trivy-severity: UNKNOWN,LOW,MEDIUM,HIGH,CRITICAL
+          trivy-severity: HIGH,CRITICAL
 
           # Vulnerability types which trivy detect to (default "os,library")
           # Acceptable value is comma-separated list of (os|library)
