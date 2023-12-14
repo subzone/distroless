@@ -56,15 +56,15 @@ jobs:
           # Acceptable value is one of (error|warning|info|style|ignore|none)
           hadolint-severity: info
 
-          # Enable scanning image by dockle (default "true")
-          dockle-enable: "true"
+          # # Enable scanning image by dockle (default "true")
+          # dockle-enable: "true"
 
-          # Dockle version.
-          dockle-version: "0.4.3"
+          # # Dockle version.
+          # dockle-version: "0.4.3"
 
-          # Fail step if checkpoints with a severity above this level are violated (default "WARN")
-          # Acceptable value is one of (INFO|WARN|FATAL)
-          dockle-severity: WARN
+          # # Fail step if checkpoints with a severity above this level are violated (default "WARN")
+          # # Acceptable value is one of (INFO|WARN|FATAL)
+          # dockle-severity: WARN
 
           # Enable scanning image by trivy (default "true")
           trivy-enable: "true"
