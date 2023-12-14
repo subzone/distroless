@@ -1,4 +1,4 @@
-name: Nginx - Disctroless - Base
+name: Nginx - Distroless - Base
 
 on: [push]
 
@@ -36,7 +36,8 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@f2a1d5e99d037542a71f64918e516c093c6f3fc4
         with:
-          context: ..\..\nginx-base\Dockerfile
+          context: .
+          file: ..\..\nginx-base\Dockerfile
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
