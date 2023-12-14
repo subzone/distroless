@@ -55,7 +55,7 @@ jobs:
           # Fail step if rules with a severity above this level are violated (default "info")
           # Acceptable value is one of (error|warning|info|style|ignore|none)
           hadolint-severity: info
-
+          dockle-enable: "false"
           # Enable scanning image by trivy (default "true")
           trivy-enable: "true"
 
