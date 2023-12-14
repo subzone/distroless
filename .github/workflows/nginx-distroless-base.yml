@@ -32,8 +32,7 @@ jobs:
         with:
           image_grep: "nginx"
           severities: "CRITICAL,HIGH"
-          upload_reports: true
-          output: issues   
+          upload_reports: true   
 
       - name: Log in to GitHub Container Registry
         run: docker login ghcr.io -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}
